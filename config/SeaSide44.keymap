@@ -90,12 +90,12 @@
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
-        SYMBOL {
+        ARROW_MB {
             bindings = <
-&trans  &kp PRCNT  &kp DOLLAR  &kp AMPERSAND  &kp CARET        &kp FSLH                           &kp BSLH        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LESS_THAN  &kp GREATER_THAN   &kp N0
-&trans  &kp AT     &kp HASH    &kp ASTERISK   &kp PLUS         &kp EQUAL                          &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI       &kp COLON          &kp N1
-&trans  &kp GRAVE  &kp TILDE   &kp MINUS      &kp EXCLAMATION  &kp QUESTION                       &kp PIPE        &kp LBKT              &kp RBKT               &kp SQT        &kp DOUBLE_QUOTES  &kp N2
-                   &trans      &trans         &trans           &trans        &trans    &kp COMMA  &kp PERIOD                            &kp ESC
+&trans  &kp F1  &kp F2    &kp F3        &kp F4     &kp F5                           &kp F6         &kp F7    &kp F8        &kp F9     &kp F10   &kp F11
+&trans  &trans  &trans    &kp UP_ARROW  &kp ENTER  &kp DELETE                       &kp PAGE_UP    &mkp MB1  &kp UP_ARROW  &mkp MB2   &mkp MB3  &kp F12
+&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &kp BACKSPACE                    &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &trans    &trans
+                &trans    &trans        &trans     &trans         &trans    &trans  &trans                   &trans
             >;
         };
 
