@@ -39,10 +39,37 @@
             tapping-term-ms = <200>;
         };
 
+        backslash_under_score: backslash_under_score {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSLASH_UNDER_SCORE";
+            bindings = <&kp NON_US_BACKSLASH>, <&kp UNDERSCORE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        semicolon_plus: semicolon_plus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEMICOLON_PLUS";
+            bindings = <&kp SEMICOLON>, <&kp PLUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        atmark_backquoto: atmark_backquoto {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ATMARK_BACKQUOTO";
+            bindings = <&kp AT_SIGN>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         minus_equal: minus_equal {
             compatible = "zmk,behavior-mod-morph";
-            label = "minus_equal";
-            bindings = <&kp KP_MINUS>, <&kp KP_EQUAL>;
+            label = "MINUS_EQUAL";
+            bindings = <&kp MINUS>, <&kp EQUAL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -54,10 +81,10 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE  &kp Q  &kp W         &kp E         &kp R           &kp T                                           &kp Y      &kp U  &kp I          &kp O             &kp P         &kp BACKSPACE
-&kp TAB     &kp A  &kp S         &kp D         &kp F           &kp G                                           &kp H      &kp J  &kp K          &kp L             &kp KP_PLUS   &kp ENTER
-&kp LSHFT   &kp Z  &kp X         &kp C         &kp V           &kp B                                           &kp N      &kp M  &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION  &minus_equal
-                   &kp LEFT_ALT  &kp LEFT_GUI  &kp LANGUAGE_5  &lt 1 SPACE  &lt 3 PRINTSCREEN    &lt 2 DELETE  &kp EQUAL         &kp AT_SIGN
+&kp ESCAPE  &kp Q  &kp W         &kp E         &kp R           &kp T                                           &kp Y         &kp U  &kp I              &kp O       &kp P            &kp BACKSPACE
+&kp TAB     &kp A  &kp S         &kp D         &kp F           &kp G                                           &kp H         &kp J  &kp K              &kp L       &semicolon_plus  &kp ENTER
+&kp LSHFT   &kp Z  &kp X         &kp C         &kp V           &kp B                                           &kp N         &kp M  &kp COMMA          &kp PERIOD  &kp SLASH        &backslash_under_score
+                   &kp LEFT_ALT  &kp LEFT_GUI  &kp LANGUAGE_5  &lt 1 SPACE  &lt 3 PRINTSCREEN    &lt 2 DELETE  &minus_equal         &atmark_backquoto
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
