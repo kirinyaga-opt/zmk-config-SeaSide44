@@ -40,24 +40,6 @@
             tapping-term-ms = <200>;
         };
 
-        atmark_backquoto: atmark_backquoto {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ATMARK_BACKQUOTO";
-            bindings = <&kp LEFT_BRACKET>, <&kp NON_US_HASH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        minus_equal: minus_equal {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MINUS_EQUAL";
-            bindings = <&kp MINUS>, <&kp EQUAL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         mb1_layer3: mb1_layer3 {
             compatible = "zmk,behavior-hold-tap";
             label = "MB1_LAYER3";
@@ -93,10 +75,10 @@
 
         NUM_SYMBOL {
             bindings = <
-&trans  &trans  &kp N7        &kp N8        &kp N9        &kp JP_LPAR                                 &kp JP_RPAR            &kp JP_EXCL      &kp JP_AMPS      &kp JP_AT       &kp JP_DLLR   &trans
-&trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp JP_LBKT                                 &kp JP_RBKT            &kp JP_MINUS     &kp JP_TILDE     &kp JP_HASH     &kp JP_COLON  &kp JP_DQT
-&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_LBRC                                 &kp JP_RBRC            &kp JP_UNDER     &kp JP_CARET     &kp JP_GRAVE    &kp JP_QMARK  &kp JP_PIPE
-                &kp NUMBER_0  &trans        &trans        &trans                &trans    &kp DELETE  &trans                                  &kp PRINTSCREEN
+&trans  &trans  &kp N7        &kp N8        &kp N9        &kp JP_LPAR                        &kp JP_RPAR  &kp JP_EXCL   &kp JP_AMPS      &kp JP_AT     &kp JP_DLLR   &trans
+&trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp JP_LBKT                        &kp JP_RBKT  &kp JP_MINUS  &kp JP_TILDE     &kp JP_HASH   &kp JP_COLON  &kp JP_DQT
+&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_LBRC                        &kp JP_RBRC  &kp JP_UNDER  &kp JP_CARET     &kp JP_GRAVE  &kp JP_QMARK  &kp JP_PIPE
+                &kp NUMBER_0  &trans        &trans        &trans       &trans    &kp DELETE  &trans                     &kp PRINTSCREEN
             >;
         };
 
