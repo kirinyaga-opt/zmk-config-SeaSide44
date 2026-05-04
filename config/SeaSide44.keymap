@@ -40,15 +40,6 @@
             tapping-term-ms = <200>;
         };
 
-        semicolon_plus: semicolon_plus {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SEMICOLON_PLUS";
-            bindings = <&kp SEMICOLON>, <&kp SEMICOLON>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         atmark_backquoto: atmark_backquoto {
             compatible = "zmk,behavior-mod-morph";
             label = "ATMARK_BACKQUOTO";
@@ -70,7 +61,7 @@
         mb1_layer3: mb1_layer3 {
             compatible = "zmk,behavior-hold-tap";
             label = "MB1_LAYER3";
-            bindings = <&lt>, <&mkp>;
+            bindings = <&mo>, <&mkp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -82,10 +73,10 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE  &kp Q  &kp W         &kp E         &kp R      &kp T                                  &kp Y        &kp U  &kp I              &kp O       &kp P          &kp BACKSPACE
-&kp TAB     &kp A  &kp S         &kp D         &kp F      &kp G                                  &kp H        &kp J  &kp K              &kp L       &kp SEMICOLON  &kp ENTER
-&kp LSHFT   &kp Z  &kp X         &kp C         &kp V      &kp B                                  &kp N        &kp M  &kp COMMA          &kp PERIOD  &kp SLASH      &kp INTERNATIONAL_1
-                   &kp LEFT_ALT  &kp LEFT_GUI  &kp GRAVE  &lt 1 SPACE  &mkp MB1    &lt 2 DELETE  &lt 5 MINUS         &kp JP_AT
+&kp ESCAPE  &kp Q  &kp W         &kp E         &kp R      &kp T                                           &kp Y        &kp U  &kp I      &kp O       &kp P          &kp BACKSPACE
+&kp TAB     &kp A  &kp S         &kp D         &kp F      &kp G                                           &kp H        &kp J  &kp K      &kp L       &kp SEMICOLON  &kp ENTER
+&kp LSHFT   &kp Z  &kp X         &kp C         &kp V      &kp B                                           &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH      &kp INTERNATIONAL_1
+                   &kp LEFT_ALT  &kp LEFT_GUI  &kp GRAVE  &lt 1 SPACE  &mb1_layer3 3 MB1    &lt 2 DELETE  &lt 5 MINUS         &kp JP_AT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -102,10 +93,10 @@
 
         NUM_SYMBOL {
             bindings = <
-&trans  &trans  &kp N7           &kp N8        &kp N9        &kp LEFT_PARENTHESIS                        &kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp AMPERSAND    &atmark_backquoto  &kp DOLLAR    &trans
-&trans  &trans  &kp NUMBER_4     &kp N5        &kp NUMBER_6  &kp LS(LEFT_BRACKET)                        &kp RIGHT_BRACKET      &minus_equal     &kp TILDE        &kp HASH           &kp COLON     &kp DOUBLE_QUOTES
-&trans  &trans  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_BRACE                              &kp RIGHT_BRACE        &kp UNDERSCORE   &kp CARET        &kp GRAVE          &kp QUESTION  &kp PIPE
-                &kp KP_NUMBER_0  &trans        &trans        &trans                &trans    &kp DELETE  &trans                                  &kp PRINTSCREEN
+&trans  &trans  &kp N7        &kp N8        &kp N9        &kp LEFT_PARENTHESIS                        &kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp AMPERSAND    &atmark_backquoto  &kp DOLLAR    &trans
+&trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LS(LEFT_BRACKET)                        &kp RIGHT_BRACKET      &kp MINUS        &kp TILDE        &kp HASH           &kp COLON     &kp DOUBLE_QUOTES
+&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_BRACE                              &kp RIGHT_BRACE        &kp UNDERSCORE   &kp CARET        &kp GRAVE          &kp QUESTION  &kp PIPE
+                &kp NUMBER_0  &trans        &trans        &trans                &trans    &kp DELETE  &trans                                  &kp PRINTSCREEN
             >;
         };
 
