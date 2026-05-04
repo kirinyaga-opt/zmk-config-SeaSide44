@@ -40,9 +40,9 @@
             tapping-term-ms = <200>;
         };
 
-        mb1_layer3: mb1_layer3 {
+        mb1_layer5: mb1_layer5 {
             compatible = "zmk,behavior-hold-tap";
-            label = "MB1_LAYER3";
+            label = "MB1_LAYER5";
             bindings = <&mo>, <&mkp>;
 
             #binding-cells = <2>;
@@ -58,7 +58,7 @@
 &kp ESCAPE  &kp Q  &kp W         &kp E         &kp R      &kp T                                           &kp Y        &kp U  &kp I      &kp O       &kp P          &kp BACKSPACE
 &kp TAB     &kp A  &kp S         &kp D         &kp F      &kp G                                           &kp H        &kp J  &kp K      &kp L       &kp SEMICOLON  &kp ENTER
 &kp LSHFT   &kp Z  &kp X         &kp C         &kp V      &kp B                                           &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH      &kp INTERNATIONAL_1
-                   &kp LEFT_ALT  &kp LEFT_GUI  &kp GRAVE  &lt 1 SPACE  &mb1_layer3 3 MB1    &lt 2 DELETE  &lt 5 MINUS         &kp JP_AT
+                   &kp LEFT_ALT  &kp LEFT_GUI  &kp GRAVE  &lt 1 SPACE  &mb1_layer5 5 MB1    &lt 2 DELETE  &lt 3 MINUS         &kp JP_AT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
