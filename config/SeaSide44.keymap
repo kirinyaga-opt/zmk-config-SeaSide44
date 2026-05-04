@@ -39,19 +39,10 @@
             tapping-term-ms = <200>;
         };
 
-        backslash_under_score: backslash_under_score {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BACKSLASH_UNDER_SCORE";
-            bindings = <&kp NON_US_BACKSLASH>, <&kp UNDERSCORE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         semicolon_plus: semicolon_plus {
             compatible = "zmk,behavior-mod-morph";
             label = "SEMICOLON_PLUS";
-            bindings = <&kp SEMICOLON>, <&kp PLUS>;
+            bindings = <&kp SEMICOLON>, <&kp SEMICOLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -60,7 +51,7 @@
         atmark_backquoto: atmark_backquoto {
             compatible = "zmk,behavior-mod-morph";
             label = "ATMARK_BACKQUOTO";
-            bindings = <&kp AT_SIGN>, <&kp GRAVE>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -74,6 +65,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        mb1_layer3: mb1_layer3 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MB1_LAYER3";
+            bindings = <&lt>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -81,10 +81,10 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE  &kp Q  &kp W         &kp E         &kp R           &kp T                                           &kp Y        &kp U  &kp I              &kp O       &kp P            &kp BACKSPACE
-&kp TAB     &kp A  &kp S         &kp D         &kp F           &kp G                                           &kp H        &kp J  &kp K              &kp L       &semicolon_plus  &kp ENTER
-&kp LSHFT   &kp Z  &kp X         &kp C         &kp V           &kp B                                           &kp N        &kp M  &kp COMMA          &kp PERIOD  &kp SLASH        &backslash_under_score
-                   &kp LEFT_ALT  &kp LEFT_GUI  &kp LANGUAGE_5  &lt 1 SPACE  &lt 3 PRINTSCREEN    &lt 2 DELETE  &lt 6 MINUS         &atmark_backquoto
+&kp ESCAPE  &kp Q  &kp W         &kp E         &kp R      &kp T                                           &kp Y        &kp U  &kp I              &kp O       &kp P            &kp BACKSPACE
+&kp TAB     &kp A  &kp S         &kp D         &kp F      &kp G                                           &kp H        &kp J  &kp K              &kp L       &semicolon_plus  &kp ENTER
+&kp LSHFT   &kp Z  &kp X         &kp C         &kp V      &kp B                                           &kp N        &kp M  &kp COMMA          &kp PERIOD  &kp SLASH        &kp INTERNATIONAL_1
+                   &kp LEFT_ALT  &kp LEFT_GUI  &kp GRAVE  &lt 1 SPACE  &mb1_layer3 3 MB1    &lt 2 DELETE  &lt 5 MINUS         &atmark_backquoto
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
