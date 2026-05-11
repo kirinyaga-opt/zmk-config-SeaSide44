@@ -1,5 +1,18 @@
+# 既存構成
 config SHIELD_SeaSide44_R
     def_bool $(shields_list_contains,SeaSide44_R)
 
 config SHIELD_SeaSide44_L
     def_bool $(shields_list_contains,SeaSide44_L)
+
+# 新規構成
+# ドングルシールド（新規）
+config SHIELD_SEASIDE44_D
+    def_bool $(shields_list_contains,SeaSide44_D)
+
+# ドングル用ペリフェラルシールド（新規）
+config SHIELD_SEASIDE44_L_PERIPHERAL
+    def_bool $(shields_list_contains,SeaSide44_L_peripheral)
+
+config SHIELD_SEASIDE44_R_PERIPHERAL
+    def_bool $(shields_list_contains,SeaSide44_R_peripheral)

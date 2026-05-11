@@ -1,3 +1,4 @@
+# 既存構成設定
 if SHIELD_SeaSide44_R
 
 config ZMK_KEYBOARD_NAME
@@ -17,6 +18,49 @@ config ZMK_KEYBOARD_NAME
     default "SeaSide44_L"
 
 config ZMK_SPLIT
+    default y
+
+endif
+
+# 新規構成 (Prospector追加版)
+# ドングル設定
+if SHIELD_SEASIDE44_D
+
+config ZMK_KEYBOARD_NAME
+    default "SeaSide44"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
+
+config ZMK_MOUSE
+    default y
+
+endif
+
+# 左右ペリフェラル
+# ペリフェラル専用シールド設定（新規）
+if SHIELD_SEASIDE44_L_PERIPHERAL || SHIELD_SEASIDE44_R_PERIPHERAL
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+endif
+
+if SHIELD_SEASIDE44_R_PERIPHERAL
+
+config ZMK_MOUSE
+    default y
+
+config SPI
     default y
 
 endif
