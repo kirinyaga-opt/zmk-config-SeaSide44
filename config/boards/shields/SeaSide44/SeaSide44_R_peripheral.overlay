@@ -68,10 +68,3 @@
         scroll-layers = <5>;
     };
 };
-
-/* Configure split input to send right trackball data to dongle */
-&tb_right_split {
-    device = <&tb_right>;
-
-    input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>;
-};
