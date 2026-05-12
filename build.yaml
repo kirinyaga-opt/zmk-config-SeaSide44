@@ -28,7 +28,7 @@ include:
    shield: SeaSide44_L rgbled_adapter
 
 # ========================================
-# settings_reset（既存）
+# setting reset
 # ========================================
  - board: seeeduino_xiao_ble
    shield: settings_reset
