@@ -91,4 +91,21 @@
             , <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
             ;
     };
+
+    /* トラックボールを split 入力として扱う */
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        tb_right_split: tb_right_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+        };
+    };
+
+    tb_right_listener: tb_right_listener {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&tb_right_split>;
+    };
 };
