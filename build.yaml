@@ -46,5 +46,5 @@ include:
    shield: SeaSide44_L_peripheral rgbled_adapter
 
 # 右側ペリフェラル
- - board:seeeduino_xiao_ble
+ - board: seeeduino_xiao_ble
    shield: SeaSide44_R_peripheral rgbled_adapter
