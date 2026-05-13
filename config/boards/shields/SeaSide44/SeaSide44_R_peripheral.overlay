@@ -71,5 +71,5 @@
 };
 
 &tb_right_split {
-    device = 〈&tb_right〉;
+    device = <&tb_right>;
 };
