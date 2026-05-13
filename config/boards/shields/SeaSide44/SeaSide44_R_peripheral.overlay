@@ -68,3 +68,8 @@
         scroll-layers = <5>;
     };
 };
+
+&tb_right_split {
+    device = 〈&tb_right〉;
+    input-processors = 〈&zip_xy_transform INPUT_TRANSFORM_Y_INVERT〉;
+};
