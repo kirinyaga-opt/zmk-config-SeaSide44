@@ -48,4 +48,4 @@ include:
 # 右側ペリフェラル
  - board: seeeduino_xiao_ble
    shield: SeaSide44_R_peripheral rgbled_adapter
-   cmake-args: DZMK_EXTRA_MODULES="${base_dr}/config/modules/zmk-pmw3610-driver"
+   cmake-args: -DZMK_EXTRA_MODULES="${base_dr}/config/modules/zmk-pmw3610-driver"
