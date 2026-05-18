@@ -31,7 +31,7 @@
         compatible = "zmk,input-listener";
         status = "okay";
         device = <&tb_right_split>;
-        automouse-layer = <4>;
-        scroll-layers = <5>;
+//        automouse-layer = <4>;
+//        scroll-layers = <5>;
     };
 };
