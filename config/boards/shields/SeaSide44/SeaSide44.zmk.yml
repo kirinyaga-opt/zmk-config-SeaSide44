@@ -6,3 +6,4 @@ url: https://github.com/kumamuk-git/zmk-config-SeaSide44
 requires: [seeeduino_xiao_ble]
 features:
   - keys
+  - pointing
