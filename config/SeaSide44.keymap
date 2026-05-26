@@ -44,6 +44,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "0:BASE"; // for LCD display
             bindings = <
 &kp ESCAPE  &kp Q             &kp W      &kp E         &kp R             &kp T                                            &kp Y            &kp U  &lt 5 I   &kp O     &lt 6 P       &kp BACKSPACE
 &kp TAB     &kp A             &kp S      &kp D         &kp F             &kp G                                            &kp H            &kp J  &kp K     &kp L     &kp MINUS     &kp ENTER
@@ -55,6 +56,7 @@
         };
 
         SYMBOL {
+            display-name = "SYMBOL"; // for LCD display
             bindings = <
 &trans  &kp PRCNT  &kp DOLLAR  &kp AMPERSAND  &kp CARET        &kp FSLH                         &kp BSLH        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LESS_THAN  &kp GREATER_THAN   &kp N0
 &trans  &kp AT     &kp HASH    &kp ASTERISK   &kp PLUS         &kp EQUAL                        &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI       &kp COLON          &kp N1
@@ -64,6 +66,7 @@
         };
 
         NUM {
+            display-name = "NUM"; // for LCD display
             bindings = <
 &trans  &trans  &kp F9  &kp F10  &kp F11  &kp F12                  &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp PLUS         &kp MINUS   &kp N0
 &trans  &trans  &kp F5  &kp F6   &kp F7   &kp F8                   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK     &kp SLASH   &kp N1
