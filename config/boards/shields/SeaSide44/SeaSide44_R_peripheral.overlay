@@ -149,6 +149,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        scroll-layers = <5>;
+        // scroll-layers は ドングル側（SeaSide44_D.overlay）の input-listener で層別処理として実装
+        // split構成では Central 側での処理が優先されるため、Peripheral 側の設定は不要
     };
 };
