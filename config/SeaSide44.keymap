@@ -66,7 +66,7 @@
         };
 
         ARROW_MB {
-            display-name = "1:ARROW_MB"; // for LCD display
+            display-name = "1:ARROW"; // for LCD display
             bindings = <
 &trans  &kp F1  &kp F2    &kp F3        &kp F4     &kp F5                           &kp F6         &kp F7    &kp F8        &kp F9     &kp F10   &kp F11
 &trans  &trans  &trans    &kp UP_ARROW  &kp ENTER  &kp DELETE                       &kp PAGE_UP    &mkp MB1  &kp UP_ARROW  &mkp MB2   &mkp MB3  &kp F12
@@ -76,7 +76,7 @@
         };
 
         NUM_SYMBOL {
-            display-name = "2:NUM_SMBL"; // for LCD display
+            display-name = "2:NUM"; // for LCD display
             bindings = <
 &trans  &trans  &kp N7        &kp N8        &kp N9        &kp JP_LPAR                        &kp JP_RPAR  &kp JP_EXCL   &kp JP_AMPS      &kp JP_AT     &kp JP_DLLR   &trans
 &trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp JP_LBKT                        &kp JP_RBKT  &kp JP_MINUS  &kp JP_TILDE     &kp JP_HASH   &kp JP_COLON  &kp JP_DQT
@@ -107,6 +107,7 @@
         };
 
         SCROLL {
+            display-name = "5:SCROLL"; // for LCD display
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                                          &trans            &trans  &trans  &trans  &trans  &kp N0
 &trans  &trans  &trans  &trans  &trans  &trans                                          &trans            &trans  &trans  &trans  &trans  &kp N1
