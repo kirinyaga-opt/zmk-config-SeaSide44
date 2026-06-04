@@ -1,4 +1,5 @@
 #include <physical_layouts.dtsi>
+#include <input/processros.dtsi>
 #include "SeaSide44.dtsi"
 
 / {
@@ -33,5 +34,10 @@
         device = <&tb_right_split>;
 //        automouse-layer = <4>;
 //        scroll-layers = <5>;
+
+        scroll_layer {
+            layers = <5>;
+            input-processros = <&zip_xy_to_scroll_mapper>;
+        };
     };
 };
