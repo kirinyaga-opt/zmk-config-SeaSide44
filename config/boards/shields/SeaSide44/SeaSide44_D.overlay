@@ -1,5 +1,5 @@
 #include <physical_layouts.dtsi>
-#include <processors.dtsi>
+#include <zmk/app/dts/input/processors.dtsi>
 #include "SeaSide44.dtsi"
 
 / {
