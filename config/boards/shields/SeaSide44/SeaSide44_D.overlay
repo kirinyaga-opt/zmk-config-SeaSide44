@@ -1,5 +1,6 @@
 #include <physical_layouts.dtsi>
 #include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 #include "SeaSide44.dtsi"
 
 / {
@@ -39,10 +40,11 @@
             layers = <5>;
 //            input-processors = <&zip_xy_to_scroll_mapper>;
             input-processors = <
-                // 1. スクロールに変換する前に、まずY軸の信号だけを反転（invert）させる
-                &zip_xy_invert_y
-                // 2. その後、XY移動をスクロール移動に変換する
-                &zip_xy_to_scroll_mapper
+                // 1. 正しくは &zip_xy_transform を使い、(INPUT_TRANSFORM_Y_INVERT) を渡します
+                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+                
+                // 2. その後、スクロールに変換します
+                <&zip_xy_to_scroll_mapper>
             >;
         };
     };
